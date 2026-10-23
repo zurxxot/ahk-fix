@@ -1,0 +1,2 @@
+// Icono del .exe y de la bandeja (recurso 1, ver IDI_MEOW en SoruAutoX.cpp)
+1 ICON "meow.ico"
