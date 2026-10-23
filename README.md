@@ -1,4 +1,4 @@
-﻿# ahk-fix
+# ahk-fix
 
 Standalone C++ port of `soru_autox.ahk` (Soru Auto X/Z/C for Blox Fruits). It watches your own Soru
 (position jump + a "Soru" / "DodgeQuick" sound, gated by a recent R press) and then sends the current
