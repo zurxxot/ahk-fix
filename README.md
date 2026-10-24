@@ -6,11 +6,24 @@ R press) and then sends the current mode's key (X, Z or C). The mode key (Caps L
 OFF -> X -> Z -> C -> V -> OFF. Hover the tray icon for the status; it should read `Connected (version-...)`.
 You need to be inside a Blox Fruits server for it to connect.
 
+## Download
+
+Grab `meow.exe` from the [latest release](https://github.com/zurxxot/ahk-fix/releases/latest) and run it.
+It lives in the system tray.
+
 ## Changing the mode key
 
 Right-click the tray icon -> Settings -> Keybind tab -> click **Change key**, then press the key you want
 (Esc cancels) and click Save. The key only changes after you click the button, so a stray keypress can't pick
 one by accident. Caps Lock is the default and works as is.
+
+## Auto update
+
+From v1.1.0 it updates itself: shortly after start and every 6 hours it checks this repo's latest release, and
+if there is a newer `meow.exe` it downloads it, checks the size and SHA-256, swaps itself in and restarts.
+It never restarts while Roblox is the focused window. Turn it off in Settings -> General -> **Auto update**,
+or check by hand from the tray menu -> **Check for updates**. Versions older than 1.1.0 can't update
+themselves, so download the new exe once.
 
 ## Offsets
 
