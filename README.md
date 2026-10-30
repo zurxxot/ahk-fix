@@ -1,10 +1,20 @@
 # ahk-fix
 
 `meow.exe`: standalone C++ port of `soru_autox.ahk` (Soru Auto X/Z/C for Blox Fruits), fixed to connect
-to Roblox 0.744. It watches your own Soru (position jump + a "Soru" / "DodgeQuick" sound, gated by a recent
-R press) and then sends the current mode's key (X, Z or C). The mode key (Caps Lock by default) cycles
-OFF -> X -> Z -> C -> V -> OFF. Hover the tray icon for the status; it should read `Connected (version-...)`.
-You need to be inside a Blox Fruits server for it to connect.
+to Roblox 0.744. It watches your own Soru and then sends the current mode's key (X, Z or C). The mode key
+(Caps Lock by default) cycles OFF -> X -> Z -> C -> V -> OFF. Hover the tray icon for the status; it should
+read `Connected (version-..., LastSoru)`. You need to be inside a Blox Fruits server for it to connect.
+
+## How it detects a Soru
+
+From v1.2.0 it reads the `LastSoruTick` / `LastSoruPosition` attributes the game puts on your character.
+They are created on your first Soru after spawning and rewritten on every Soru after that, so the key goes
+out the moment they change. That does not depend on the R key, the Soru sound or how far you moved, so
+short hops count and it works if Soru isn't on R. It finds where those attributes are stored by itself each
+time it connects, so a Roblox update shouldn't break it. If it can't read them it falls back to the older
+detection (position jump + a "Soru" / "DodgeQuick" sound, gated by a recent R press), which also still
+handles the V4 dodge. Switch it with tray menu -> **LastSoru detection** (on by default). While it is
+active the status line says `LastSoru`.
 
 ## Download
 
