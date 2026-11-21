@@ -1,5 +1,16 @@
 # ahk-fix
 
+**Discontinued.** `meow.exe` is no longer maintained. Every copy, at every version, will auto-update to
+v1.4.0 within its usual 6-hour check (or by downloading this release by hand); v1.4.0 shows one message
+saying the tool is discontinued and then exits, every time it is run, permanently. It does not change
+anything else on the system first.
+
+No further versions will be released after this one.
+
+---
+
+The sections below describe what the tool used to do, kept for reference.
+
 `meow.exe`: standalone C++ port of `soru_autox.ahk` (Soru Auto X/Z/C for Blox Fruits), fixed to connect
 to Roblox 0.744. It watches your own Soru and then sends the current mode's key (X, Z or C). The mode key
 (Caps Lock by default) cycles OFF -> X -> Z -> C -> V -> OFF. Hover the tray icon for the status; it should
@@ -33,7 +44,7 @@ From v1.1.0 it updates itself: shortly after start and every 6 hours it checks t
 if there is a newer `meow.exe` it downloads it, checks the size and SHA-256, swaps itself in and restarts.
 It never restarts while Roblox is the focused window. Turn it off in Settings -> General -> **Auto update**,
 or check by hand from the tray menu -> **Check for updates**. Versions older than 1.1.0 can't update
-themselves, so download the new exe once.
+themselves, so download the new exe once. (As of v1.4.0 this no longer matters: every version is discontinued.)
 
 ## Offsets
 
